@@ -1,0 +1,26 @@
+{
+  "name": "lookon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Virtual try-on for any Shopify store: wigs, hats, beards, glasses, jewellery and more. Reads the store's products and the shopper's selected variant automatically.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "TRYON_ENGINE=mock node server.js",
+    "test": "node --test --test-timeout=30000 test/units.test.mjs test/api.test.mjs test/block.test.mjs test/quality.test.mjs test/face.test.mjs test/vision.test.mjs test/focus.test.mjs test/billing.test.mjs test/visibility.test.mjs"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "sharp": "^0.35.5"
+  },
+  "optionalDependencies": {
+    "mongodb": "^6.10.0"
+  },
+  "devDependencies": {
+    "canvas": "^3.2.3",
+    "jsdom": "^29.1.1"
+  }
+}

@@ -1,0 +1,26 @@
+
+# lookOn - Staging Shopify App
+
+client_id = "bfcf4a40c26c5b2ff44d01e5a592c396"
+name = "lookOn"
+application_url = "https://radrasa-dynamic-staging.vercel.app/app"
+embedded = true
+
+[access_scopes]
+scopes = "read_products"
+
+[auth]
+redirect_urls = [
+  "https://radrasa-dynamic-staging.vercel.app/auth/callback"
+]
+
+[webhooks]
+api_version = "2026-10"
+
+[[webhooks.subscriptions]]
+topics = ["app/uninstalled", "products/create", "products/update", "products/delete", "app_purchases_one_time/update"]
+uri = "/webhooks/shopify"
+
+[[webhooks.subscriptions]]
+compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
+uri = "/webhooks/shopify"

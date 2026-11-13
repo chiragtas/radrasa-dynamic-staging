@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>lookOn · Control room</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%221069.7%20-85.5%20576.4%20576.4%22%3E%3Crect%20x%3D%221069.7%22%20y%3D%22-85.5%22%20width%3D%22576.4%22%20height%3D%22576.4%22%20rx%3D%22126.8%22%20fill%3D%22%23111318%22/%3E%3Cpath%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20d%3D%22M1447.5%2C395.9C1469.4%2C393.5%201487.6%2C384.2%201505.0%2C366.5C1509.6%2C361.9%201515.1%2C355.4%201517.2%2C352.0C1519.3%2C348.7%201528.5%2C331.2%201537.7%2C313.2C1546.8%2C295.2%201559.3%2C270.8%201565.6%2C259.0C1590.9%2C210.8%201592.4%2C206.7%201590.2%2C189.1C1587.3%2C165.3%201574.5%2C149.9%201551.0%2C141.5C1544.7%2C139.3%201523.1%2C138.3%201520.9%2C140.1C1518.8%2C142.0%201470.7%2C241.3%201453.8%2C279.0C1450.4%2C286.4%201446.2%2C294.9%201444.3%2C297.7C1437.7%2C307.7%201426.6%2C316.0%201414.0%2C320.2C1407.7%2C322.4%201405.8%2C322.4%201353.5%2C323.0L1299.5%2C323.5L1287.5%2C336.0C1272.8%2C351.3%201258.2%2C366.6%201255.5%2C369.6C1254.4%2C370.8%201248.4%2C377.0%201242.2%2C383.3C1235.9%2C389.7%201231.1%2C395.3%201231.4%2C395.9C1232.4%2C397.4%201434.4%2C397.4%201447.5%2C395.9ZM1356.7%2C273.8C1359.7%2C258.3%201368.0%2C239.8%201376.0%2C230.8C1386.4%2C219.2%201403.9%2C210.7%201428.2%2C205.5C1432.4%2C204.7%201431.5%2C203.3%201426.0%2C202.1C1423.3%2C201.5%201417.0%2C199.7%201412.0%2C198.1C1379.1%2C187.2%201365.9%2C171.9%201358.4%2C136.1C1357.6%2C132.0%201356.7%2C128.2%201356.3%2C127.7C1355.5%2C126.3%201354.0%2C129.1%201354.0%2C132.2C1354.0%2C136.3%201348.3%2C152.7%201343.7%2C162.0C1337.0%2C175.4%201326.7%2C185.2%201311.7%2C192.4C1304.1%2C196.1%201286.5%2C202.0%201283.2%2C202.0C1281.7%2C202.0%201279.8%2C202.4%201279.0%2C203.0C1277.2%2C204.1%201277.4%2C204.2%201287.5%2C206.6C1304.6%2C210.6%201321.8%2C219.1%201330.8%2C227.9C1339.1%2C236.0%201346.5%2C250.4%201350.5%2C266.2C1353.7%2C278.9%201354.1%2C280.0%201354.8%2C280.0C1355.2%2C280.0%201356.1%2C277.2%201356.7%2C273.8ZM1190.9%2C255.8C1194.1%2C249.0%201211.9%2C213.2%201230.4%2C176.1C1255.4%2C126.1%201265.2%2C107.3%201268.5%2C103.5C1274.3%2C96.6%201284.7%2C89.6%201294.0%2C86.2L1301.5%2C83.5L1351.7%2C83.0L1401.8%2C82.5L1423.7%2C59.6C1456.2%2C25.6%201469.0%2C11.6%201468.6%2C10.5C1468.4%2C9.8%201434.5%2C9.5%201369.4%2C9.5L1270.5%2C9.5L1261.6%2C11.8C1243.0%2C16.5%201228.4%2C24.9%201214.0%2C39.3C1204.2%2C49.0%201200.6%2C54.2%201191.5%2C71.5C1181.9%2C89.8%201151.9%2C145.3%201151.0%2C146.5C1148.9%2C149.3%201126.7%2C191.5%201125.4%2C195.2C1120.8%2C208.3%201121.6%2C225.4%201127.6%2C237.8C1134.3%2C251.6%201149.3%2C263.3%201163.9%2C266.0C1166.9%2C266.6%201169.6%2C267.2%201169.8%2C267.5C1170.1%2C267.8%201173.7%2C268.0%201177.7%2C268.0L1185.1%2C268.0L1190.9%2C255.8Z%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b1a22;--muted:#686676;--faint:#9b99a8;--line:#e7e5ee;--bg:#f6f5f9;--card:#fff;--side:#17151f;--side-ink:#c9c6d6;
+  --lens:#5b3fd6;--lens-2:#8b74f0;--iris:#efebff;--ok:#0f7a55;--ok-bg:#e2f4eb;--warn:#8a5300;--warn-bg:#fff1d6;--bad:#a8291b;--bad-bg:#fde8e5;
+  --credits:#5b3fd6;--share:#1f9d7a;--ai:#e0a33a;--profit:#2d6cdf;
+  font:14px/1.5 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);font-variant-numeric:tabular-nums;
+}
+*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--lens);outline-offset:2px}
+h1{font-size:22px;margin:0;letter-spacing:-.02em;font-weight:800}h2{font-size:16px;margin:0;font-weight:700;letter-spacing:-.01em}h3{font-size:13px;margin:0;font-weight:700;color:var(--muted)}
+p{margin:0}.muted{color:var(--muted)}.small{font-size:12.5px}.hidden{display:none!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:9px 15px;font-weight:700;cursor:pointer;background:var(--ink);color:#fff;white-space:nowrap;text-decoration:none}
+.btn.lens{background:var(--lens)}.btn.ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px #d6d3e1}.btn.danger{background:#fff;color:var(--bad);box-shadow:inset 0 0 0 1px #efc4bd}.btn.sm{padding:6px 11px;font-size:13px;border-radius:8px}
+.btn:disabled{opacity:.5;cursor:default}
+input[type=text],input[type=email],input[type=password],input[type=number],input[type=search],select{width:100%;border:1px solid #d6d3e1;border-radius:10px;padding:9px 11px;background:#fff}
+label.f{display:grid;gap:6px;font-weight:600;font-size:13px}label.f .hint{font-weight:500;color:var(--muted);font-size:12px}
+.tag{display:inline-block;border-radius:6px;padding:2px 8px;font-size:12px;font-weight:700;background:#efeef4;color:#4b4858}
+.tag.ok{background:var(--ok-bg);color:var(--ok)}.tag.warn{background:var(--warn-bg);color:var(--warn)}.tag.bad{background:var(--bad-bg);color:var(--bad)}.tag.lens{background:var(--iris);color:#3b2690}
+/* ---- login ---- */
+.login{min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(1200px 600px at 80% -10%,#e9e3ff,transparent),var(--bg)}
+.login form{width:min(380px,100%);background:#fff;border-radius:20px;padding:30px;box-shadow:0 1px 2px #0000000d,0 20px 50px #2a1f6b14;display:grid;gap:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+.logo svg{height:22px;width:auto;display:block}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* ---- shell ---- */
+.shell{display:grid;grid-template-columns:232px 1fr;min-height:100vh}
+aside{background:var(--side);color:var(--side-ink);padding:22px 14px;display:flex;flex-direction:column;gap:22px;position:sticky;top:0;height:100vh}
+aside .logo{color:#fff;padding:0 8px}
+aside nav{display:grid;gap:2px}
+aside nav button{display:flex;align-items:center;gap:10px;text-align:left;border:0;background:none;color:var(--side-ink);padding:9px 10px;border-radius:9px;cursor:pointer;font-weight:600}
+aside nav button:hover{background:#ffffff0d;color:#fff}
+aside nav button[aria-current=true]{background:#ffffff14;color:#fff}
+aside nav button svg{width:17px;height:17px;flex:none;opacity:.85}
+aside .me{margin-top:auto;padding:12px 10px;border-top:1px solid #ffffff14;font-size:13px}
+aside .me b{display:block;color:#fff}
+aside .me button{background:none;border:0;color:var(--side-ink);padding:0;margin-top:6px;cursor:pointer;text-decoration:underline}
+main{padding:24px 30px 60px;min-width:0}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.mode{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:12px;padding:5px 5px 5px 12px;box-shadow:0 0 0 1px var(--line)}
+.mode .lbl{font-size:12.5px;color:var(--muted);font-weight:600}
+.mode .seg{display:inline-flex;background:#f0eef5;border-radius:9px;padding:3px}
+.mode .seg button{border:0;background:none;border-radius:7px;padding:5px 12px;font-weight:700;cursor:pointer;color:var(--muted)}
+.mode .seg button[aria-pressed=true][data-mode=test]{background:var(--warn-bg);color:var(--warn)}
+.mode .seg button[aria-pressed=true][data-mode=live]{background:var(--ok);color:#fff}
+.card{background:var(--card);border-radius:16px;box-shadow:0 0 0 1px #1b1a220d,0 1px 2px #1b1a220a;padding:20px}
+.grid{display:grid;gap:16px}
+.head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+/* overview figures: one ruled strip instead of a card per number */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));background:#fff;border-radius:16px;box-shadow:0 0 0 1px #1b1a220d;overflow:hidden}
+.strip div{padding:16px 18px;border-right:1px solid var(--line)}.strip div:last-child{border-right:0}
+.strip span{font-size:12.5px;color:var(--muted);font-weight:600}.strip b{display:block;font-size:22px;letter-spacing:-.02em;margin-top:2px}
+.strip small{color:var(--faint);font-size:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+/* tables */
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:11px 10px;border-bottom:1px solid #f0eff4;vertical-align:middle}
+th{font-size:12px;color:var(--muted);font-weight:700}th.num,td.num{text-align:right}
+tbody tr:last-child td{border-bottom:0}
+tr.click{cursor:pointer}tr.click:hover td{background:#faf9fd}
+.tbl{overflow:auto}
+.pager{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:12px;color:var(--muted);font-size:12.5px}
+.pager .b{display:flex;gap:6px;align-items:center}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips button{border:1px solid #d6d3e1;background:#fff;border-radius:999px;padding:5px 12px;font-weight:600;font-size:13px;cursor:pointer;color:var(--muted)}
+.chips button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.meter{height:6px;border-radius:6px;background:#eeecf3;overflow:hidden;width:90px;display:inline-block;vertical-align:middle;margin-right:8px}.meter i{display:block;height:100%;background:var(--lens)}
+.empty{padding:30px 10px;text-align:center;color:var(--muted)}
+/* credit logic */
+.models{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.model{display:flex;gap:12px;border:1.5px solid var(--line);border-radius:14px;padding:16px;cursor:pointer;background:#fff}
+.model:has(input:checked){border-color:var(--lens);background:#fbfaff}
+.model input{accent-color:var(--lens);margin-top:3px}
+.model b{display:block;font-size:15px}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.packs{display:grid;gap:8px}
+.pack{display:grid;grid-template-columns:1.2fr 1fr 1fr auto auto;gap:8px;align-items:center}
+.sim{display:grid;gap:14px}
+.sim .in{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sim .in input{width:120px}
+.flow{display:flex;height:46px;border-radius:12px;overflow:hidden;box-shadow:inset 0 0 0 1px #0000000d}
+.flow div{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:12.5px;min-width:0;white-space:nowrap;overflow:hidden;transition:flex-basis .3s}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.legend div{border-left:3px solid;padding:2px 0 2px 10px}.legend b{display:block;font-size:18px;letter-spacing:-.02em}.legend span{font-size:12.5px;color:var(--muted)}
+.explain{background:#f9f8fc;border-radius:12px;padding:14px 16px;font-size:13.5px;color:#3d3a4a;line-height:1.6}
+.econ tbody tr{cursor:pointer}.econ tbody tr[aria-selected=true] td{background:#f5f2ff}
+.profit{display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.profit .big{padding:20px;background:#f3fbf7;display:grid;align-content:center;gap:4px}.profit .big span{font-size:12.5px;color:var(--muted);font-weight:700}.profit .big b{font-size:34px;letter-spacing:-.03em;color:var(--ok)}.profit .big b.neg{color:var(--bad)}
+.profit dl{margin:0;padding:12px 20px;display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-content:center}.profit dt{color:var(--muted)}.profit dd{margin:0;text-align:right;font-weight:700}
+@media(max-width:900px){.profit{grid-template-columns:1fr}}
+/* gateways */
+.gws{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.gw{border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:12px;align-content:start}
+.gw .top{display:flex;justify-content:space-between;align-items:center}
+.toggle{position:relative;width:40px;height:23px;border-radius:999px;background:#d6d3e1;border:0;cursor:pointer;flex:none}
+.toggle::after{content:"";position:absolute;top:3px;left:3px;width:17px;height:17px;border-radius:50%;background:#fff;transition:transform .15s}
+.toggle[aria-checked=true]{background:var(--lens)}.toggle[aria-checked=true]::after{transform:translateX(17px)}
+.keytabs{display:inline-flex;background:#f0eef5;border-radius:8px;padding:3px}
+.keytabs button{border:0;background:none;border-radius:6px;padding:4px 10px;font-weight:700;font-size:12.5px;cursor:pointer;color:var(--muted)}
+.keytabs button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 1px 2px #0000001a}
+.set{font-size:12px;font-weight:700}.set.y{color:var(--ok)}.set.n{color:var(--faint)}
+.copy{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:#f4f2f8;border-radius:8px;padding:7px 9px;word-break:break-all;cursor:copy}
+.savebar{position:sticky;bottom:12px;margin-top:16px;background:#fffffff2;backdrop-filter:blur(8px);border-radius:14px;box-shadow:0 0 0 1px var(--line),0 10px 30px #1b1a2214;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.status{font-size:13px;color:var(--muted)}.status.err{color:var(--bad)}.status.ok{color:var(--ok)}
+/* drawer */
+.scrim{position:fixed;inset:0;background:#17151f59;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
+.scrim.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100vh;width:min(560px,100vw);background:#fff;z-index:21;transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column;box-shadow:-20px 0 50px #17151f2b}
+.drawer.open{transform:none}
+.drawer header{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.drawer .body{padding:20px 22px;overflow:auto;display:grid;gap:22px;align-content:start}
+.drawer section{display:grid;gap:10px}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.kv div{background:#f8f7fb;border-radius:10px;padding:10px 12px}.kv span{font-size:12px;color:var(--muted);font-weight:600}.kv b{display:block;font-size:17px}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>input,.row>select{flex:1;min-width:120px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;transition:all .2s;z-index:30;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.skeleton{background:linear-gradient(90deg,#eeedf2,#f7f6fa,#eeedf2);background-size:200% 100%;animation:sk 1.2s infinite;border-radius:8px;height:14px;margin:10px 0}
+@keyframes sk{to{background-position:-200% 0}}
+@media(max-width:900px){.shell{grid-template-columns:1fr}aside{position:static;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center}aside nav{display:flex;flex-wrap:wrap}aside .me{margin:0}.two,.models{grid-template-columns:1fr}main{padding:18px}.pack{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div id="login" class="login hidden">
+  <form id="loginForm">
+    <div class="logo"><span class="sr">lookOn</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1916 408" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M314.2,394.5C350.5,388.7 380.3,374.0 403.2,350.8C447.2,306.0 456.7,240.3 427.1,185.0C418.0,167.8 401.7,149.2 385.5,137.2C365.9,122.7 338.0,111.7 309.8,107.5C297.1,105.6 269.4,105.6 255.9,107.5C211.4,113.9 174.9,134.6 149.9,167.9C124.3,202.0 116.1,242.6 125.9,286.3C127.3,292.2 131.1,302.1 136.1,312.8C157.4,358.1 206.5,390.4 262.5,396.0C274.8,397.2 302.4,396.4 314.2,394.5ZM658.5,394.9C693.3,390.7 726.6,374.4 750.7,349.9C762.7,337.7 770.2,327.2 777.5,312.5C788.4,290.4 792.0,275.0 792.0,250.4C792.0,213.4 777.9,179.9 751.0,152.9C726.7,128.5 696.6,113.5 659.5,107.5C647.7,105.5 619.0,105.5 606.2,107.5C558.7,114.7 521.1,137.7 496.0,174.9C487.3,187.8 478.5,210.5 475.6,227.5C473.5,239.3 473.5,266.8 475.5,277.0C481.4,307.3 494.8,332.0 517.2,353.6C551.6,386.8 602.7,401.8 658.5,394.9ZM1447.5,395.9C1469.4,393.5 1487.6,384.2 1505.0,366.5C1509.6,361.9 1515.1,355.4 1517.2,352.0C1519.3,348.7 1528.5,331.2 1537.7,313.2C1546.8,295.2 1559.3,270.8 1565.6,259.0C1590.9,210.8 1592.4,206.7 1590.2,189.1C1587.3,165.3 1574.5,149.9 1551.0,141.5C1544.7,139.3 1523.1,138.3 1520.9,140.1C1518.8,142.0 1470.7,241.3 1453.8,279.0C1450.4,286.4 1446.2,294.9 1444.3,297.7C1437.7,307.7 1426.6,316.0 1414.0,320.2C1407.7,322.4 1405.8,322.4 1353.5,323.0L1299.5,323.5L1287.5,336.0C1272.8,351.3 1258.2,366.6 1255.5,369.6C1254.4,370.8 1248.4,377.0 1242.2,383.3C1235.9,389.7 1231.1,395.3 1231.4,395.9C1232.4,397.4 1434.4,397.4 1447.5,395.9ZM49.8,393.0L84.0,393.0L84.0,202.0C84.0,49.9 83.7,11.0 82.8,11.0C72.7,10.8 10.6,11.1 10.4,11.3C9.7,11.9 10.0,392.1 10.6,393.2C10.9,393.7 12.2,393.9 13.4,393.6C14.5,393.3 30.9,393.0 49.8,393.0ZM899.6,390.0C899.7,388.6 899.8,368.3 899.9,344.8L900.0,302.1L905.8,297.5C908.9,294.9 913.5,290.9 916.0,288.6C932.3,273.6 937.2,269.7 938.6,270.6C939.9,271.5 985.4,325.9 1007.0,352.5C1012.8,359.6 1019.8,368.1 1022.5,371.5C1025.3,374.8 1030.4,381.0 1033.8,385.2L1040.1,393.0L1082.1,393.0C1105.1,393.0 1124.0,392.8 1124.0,392.5C1124.0,391.6 1109.8,373.8 1078.5,335.5C1072.6,328.4 1062.4,315.8 1055.7,307.5C1049.1,299.2 1039.3,287.3 1034.0,281.0C1028.7,274.7 1018.4,262.1 1011.0,253.0C1003.6,243.9 995.9,234.5 993.8,232.1C991.7,229.7 990.0,227.2 990.0,226.5C990.0,225.8 996.2,219.5 1003.8,212.4C1011.3,205.4 1022.2,195.0 1028.0,189.5C1033.8,183.9 1042.3,175.8 1047.0,171.5C1055.2,163.6 1068.1,151.4 1095.0,125.5C1102.4,118.3 1108.6,112.2 1108.8,111.8C1109.0,111.3 1088.6,111.0 1063.5,111.0L1017.7,111.0L1000.1,127.7C990.4,136.9 977.3,149.4 971.0,155.5C960.5,165.6 936.8,187.9 919.5,204.0C915.7,207.6 909.8,213.1 906.5,216.2C903.2,219.3 900.4,221.8 900.3,221.6C900.2,221.5 900.0,174.3 900.0,116.7C899.9,59.1 899.5,11.8 899.1,11.5C898.6,11.3 882.8,10.9 863.9,10.8L829.5,10.5L829.2,201.4C829.1,314.6 829.4,392.6 829.9,392.9C830.4,393.2 846.3,393.3 865.2,393.0L899.5,392.5L899.6,390.0ZM1704.0,308.4C1704.0,225.5 1704.0,223.7 1706.1,215.2C1710.6,196.9 1717.7,186.7 1732.3,177.1C1744.9,168.9 1761.5,165.3 1777.9,167.1C1805.0,170.1 1823.7,186.3 1831.7,213.5C1833.3,219.0 1833.5,227.0 1833.7,305.0C1833.9,352.0 1834.0,391.1 1834.0,391.8C1834.0,392.7 1841.6,393.0 1868.9,393.0C1896.0,393.0 1903.9,392.7 1904.1,391.8C1904.3,391.1 1904.3,346.9 1904.0,293.5L1903.5,196.5L1900.7,187.5C1893.5,164.0 1881.7,146.6 1863.6,132.6C1853.2,124.6 1847.5,121.2 1837.0,116.8C1802.2,102.1 1762.4,103.6 1733.2,120.6C1726.9,124.3 1715.2,134.4 1709.7,140.8C1707.1,144.0 1704.5,146.6 1704.0,146.8C1703.4,147.0 1703.0,140.6 1703.0,129.8C1703.0,120.2 1702.6,112.0 1702.1,111.4C1701.5,110.9 1687.6,110.6 1667.1,110.8L1633.0,111.1L1633.0,251.4C1633.0,328.5 1633.3,392.0 1633.7,392.3C1634.0,392.7 1650.0,393.0 1669.2,393.0L1704.0,393.0L1704.0,308.4ZM264.5,332.5C244.9,328.6 230.0,321.0 216.6,308.1C199.8,291.9 192.1,274.0 192.0,250.9C192.0,228.1 199.0,210.9 215.1,194.3C241.0,167.6 284.8,159.2 320.2,173.9C340.2,182.3 355.9,196.8 365.3,215.5C377.6,240.2 376.5,268.2 362.2,292.3C356.7,301.5 342.6,315.6 333.6,320.9C325.4,325.8 311.7,330.7 301.5,332.5C291.3,334.3 273.1,334.3 264.5,332.5ZM614.8,332.5C595.6,328.8 580.8,321.0 567.0,307.1C556.0,296.0 549.8,285.3 546.0,271.0C542.9,259.4 542.9,242.1 545.9,230.1C552.5,203.8 575.1,180.3 602.0,171.7C613.8,167.9 616.8,167.5 632.5,167.5C650.2,167.5 656.0,168.5 668.0,173.5C698.6,186.3 717.0,209.4 721.1,239.8C724.1,262.2 717.4,285.3 703.1,302.6C692.2,315.7 674.3,326.8 657.0,331.0C645.8,333.8 625.4,334.5 614.8,332.5ZM1356.7,273.8C1359.7,258.3 1368.0,239.8 1376.0,230.8C1386.4,219.2 1403.9,210.7 1428.2,205.5C1432.4,204.7 1431.5,203.3 1426.0,202.1C1423.3,201.5 1417.0,199.7 1412.0,198.1C1379.1,187.2 1365.9,171.9 1358.4,136.1C1357.6,132.0 1356.7,128.2 1356.3,127.7C1355.5,126.3 1354.0,129.1 1354.0,132.2C1354.0,136.3 1348.3,152.7 1343.7,162.0C1337.0,175.4 1326.7,185.2 1311.7,192.4C1304.1,196.1 1286.5,202.0 1283.2,202.0C1281.7,202.0 1279.8,202.4 1279.0,203.0C1277.2,204.1 1277.4,204.2 1287.5,206.6C1304.6,210.6 1321.8,219.1 1330.8,227.9C1339.1,236.0 1346.5,250.4 1350.5,266.2C1353.7,278.9 1354.1,280.0 1354.8,280.0C1355.2,280.0 1356.1,277.2 1356.7,273.8ZM1190.9,255.8C1194.1,249.0 1211.9,213.2 1230.4,176.1C1255.4,126.1 1265.2,107.3 1268.5,103.5C1274.3,96.6 1284.7,89.6 1294.0,86.2L1301.5,83.5L1351.7,83.0L1401.8,82.5L1423.7,59.6C1456.2,25.6 1469.0,11.6 1468.6,10.5C1468.4,9.8 1434.5,9.5 1369.4,9.5L1270.5,9.5L1261.6,11.8C1243.0,16.5 1228.4,24.9 1214.0,39.3C1204.2,49.0 1200.6,54.2 1191.5,71.5C1181.9,89.8 1151.9,145.3 1151.0,146.5C1148.9,149.3 1126.7,191.5 1125.4,195.2C1120.8,208.3 1121.6,225.4 1127.6,237.8C1134.3,251.6 1149.3,263.3 1163.9,266.0C1166.9,266.6 1169.6,267.2 1169.8,267.5C1170.1,267.8 1173.7,268.0 1177.7,268.0L1185.1,268.0L1190.9,255.8Z"/></svg></div>
+    <div><h1>Control room</h1><p class="muted small">Sign in to manage stores, credits and payments.</p></div>
+    <label class="f">Email<input id="email" type="email" autocomplete="username" required></label>
+    <label class="f">Password<input id="password" type="password" autocomplete="current-password" required></label>
+    <p class="status err" id="loginErr"></p>
+    <button class="btn lens">Sign in</button>
+  </form>
+</div>
+
+<div id="app" class="shell hidden">
+  <aside>
+    <div class="logo"><span class="sr">lookOn</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1916 408" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M314.2,394.5C350.5,388.7 380.3,374.0 403.2,350.8C447.2,306.0 456.7,240.3 427.1,185.0C418.0,167.8 401.7,149.2 385.5,137.2C365.9,122.7 338.0,111.7 309.8,107.5C297.1,105.6 269.4,105.6 255.9,107.5C211.4,113.9 174.9,134.6 149.9,167.9C124.3,202.0 116.1,242.6 125.9,286.3C127.3,292.2 131.1,302.1 136.1,312.8C157.4,358.1 206.5,390.4 262.5,396.0C274.8,397.2 302.4,396.4 314.2,394.5ZM658.5,394.9C693.3,390.7 726.6,374.4 750.7,349.9C762.7,337.7 770.2,327.2 777.5,312.5C788.4,290.4 792.0,275.0 792.0,250.4C792.0,213.4 777.9,179.9 751.0,152.9C726.7,128.5 696.6,113.5 659.5,107.5C647.7,105.5 619.0,105.5 606.2,107.5C558.7,114.7 521.1,137.7 496.0,174.9C487.3,187.8 478.5,210.5 475.6,227.5C473.5,239.3 473.5,266.8 475.5,277.0C481.4,307.3 494.8,332.0 517.2,353.6C551.6,386.8 602.7,401.8 658.5,394.9ZM1447.5,395.9C1469.4,393.5 1487.6,384.2 1505.0,366.5C1509.6,361.9 1515.1,355.4 1517.2,352.0C1519.3,348.7 1528.5,331.2 1537.7,313.2C1546.8,295.2 1559.3,270.8 1565.6,259.0C1590.9,210.8 1592.4,206.7 1590.2,189.1C1587.3,165.3 1574.5,149.9 1551.0,141.5C1544.7,139.3 1523.1,138.3 1520.9,140.1C1518.8,142.0 1470.7,241.3 1453.8,279.0C1450.4,286.4 1446.2,294.9 1444.3,297.7C1437.7,307.7 1426.6,316.0 1414.0,320.2C1407.7,322.4 1405.8,322.4 1353.5,323.0L1299.5,323.5L1287.5,336.0C1272.8,351.3 1258.2,366.6 1255.5,369.6C1254.4,370.8 1248.4,377.0 1242.2,383.3C1235.9,389.7 1231.1,395.3 1231.4,395.9C1232.4,397.4 1434.4,397.4 1447.5,395.9ZM49.8,393.0L84.0,393.0L84.0,202.0C84.0,49.9 83.7,11.0 82.8,11.0C72.7,10.8 10.6,11.1 10.4,11.3C9.7,11.9 10.0,392.1 10.6,393.2C10.9,393.7 12.2,393.9 13.4,393.6C14.5,393.3 30.9,393.0 49.8,393.0ZM899.6,390.0C899.7,388.6 899.8,368.3 899.9,344.8L900.0,302.1L905.8,297.5C908.9,294.9 913.5,290.9 916.0,288.6C932.3,273.6 937.2,269.7 938.6,270.6C939.9,271.5 985.4,325.9 1007.0,352.5C1012.8,359.6 1019.8,368.1 1022.5,371.5C1025.3,374.8 1030.4,381.0 1033.8,385.2L1040.1,393.0L1082.1,393.0C1105.1,393.0 1124.0,392.8 1124.0,392.5C1124.0,391.6 1109.8,373.8 1078.5,335.5C1072.6,328.4 1062.4,315.8 1055.7,307.5C1049.1,299.2 1039.3,287.3 1034.0,281.0C1028.7,274.7 1018.4,262.1 1011.0,253.0C1003.6,243.9 995.9,234.5 993.8,232.1C991.7,229.7 990.0,227.2 990.0,226.5C990.0,225.8 996.2,219.5 1003.8,212.4C1011.3,205.4 1022.2,195.0 1028.0,189.5C1033.8,183.9 1042.3,175.8 1047.0,171.5C1055.2,163.6 1068.1,151.4 1095.0,125.5C1102.4,118.3 1108.6,112.2 1108.8,111.8C1109.0,111.3 1088.6,111.0 1063.5,111.0L1017.7,111.0L1000.1,127.7C990.4,136.9 977.3,149.4 971.0,155.5C960.5,165.6 936.8,187.9 919.5,204.0C915.7,207.6 909.8,213.1 906.5,216.2C903.2,219.3 900.4,221.8 900.3,221.6C900.2,221.5 900.0,174.3 900.0,116.7C899.9,59.1 899.5,11.8 899.1,11.5C898.6,11.3 882.8,10.9 863.9,10.8L829.5,10.5L829.2,201.4C829.1,314.6 829.4,392.6 829.9,392.9C830.4,393.2 846.3,393.3 865.2,393.0L899.5,392.5L899.6,390.0ZM1704.0,308.4C1704.0,225.5 1704.0,223.7 1706.1,215.2C1710.6,196.9 1717.7,186.7 1732.3,177.1C1744.9,168.9 1761.5,165.3 1777.9,167.1C1805.0,170.1 1823.7,186.3 1831.7,213.5C1833.3,219.0 1833.5,227.0 1833.7,305.0C1833.9,352.0 1834.0,391.1 1834.0,391.8C1834.0,392.7 1841.6,393.0 1868.9,393.0C1896.0,393.0 1903.9,392.7 1904.1,391.8C1904.3,391.1 1904.3,346.9 1904.0,293.5L1903.5,196.5L1900.7,187.5C1893.5,164.0 1881.7,146.6 1863.6,132.6C1853.2,124.6 1847.5,121.2 1837.0,116.8C1802.2,102.1 1762.4,103.6 1733.2,120.6C1726.9,124.3 1715.2,134.4 1709.7,140.8C1707.1,144.0 1704.5,146.6 1704.0,146.8C1703.4,147.0 1703.0,140.6 1703.0,129.8C1703.0,120.2 1702.6,112.0 1702.1,111.4C1701.5,110.9 1687.6,110.6 1667.1,110.8L1633.0,111.1L1633.0,251.4C1633.0,328.5 1633.3,392.0 1633.7,392.3C1634.0,392.7 1650.0,393.0 1669.2,393.0L1704.0,393.0L1704.0,308.4ZM264.5,332.5C244.9,328.6 230.0,321.0 216.6,308.1C199.8,291.9 192.1,274.0 192.0,250.9C192.0,228.1 199.0,210.9 215.1,194.3C241.0,167.6 284.8,159.2 320.2,173.9C340.2,182.3 355.9,196.8 365.3,215.5C377.6,240.2 376.5,268.2 362.2,292.3C356.7,301.5 342.6,315.6 333.6,320.9C325.4,325.8 311.7,330.7 301.5,332.5C291.3,334.3 273.1,334.3 264.5,332.5ZM614.8,332.5C595.6,328.8 580.8,321.0 567.0,307.1C556.0,296.0 549.8,285.3 546.0,271.0C542.9,259.4 542.9,242.1 545.9,230.1C552.5,203.8 575.1,180.3 602.0,171.7C613.8,167.9 616.8,167.5 632.5,167.5C650.2,167.5 656.0,168.5 668.0,173.5C698.6,186.3 717.0,209.4 721.1,239.8C724.1,262.2 717.4,285.3 703.1,302.6C692.2,315.7 674.3,326.8 657.0,331.0C645.8,333.8 625.4,334.5 614.8,332.5ZM1356.7,273.8C1359.7,258.3 1368.0,239.8 1376.0,230.8C1386.4,219.2 1403.9,210.7 1428.2,205.5C1432.4,204.7 1431.5,203.3 1426.0,202.1C1423.3,201.5 1417.0,199.7 1412.0,198.1C1379.1,187.2 1365.9,171.9 1358.4,136.1C1357.6,132.0 1356.7,128.2 1356.3,127.7C1355.5,126.3 1354.0,129.1 1354.0,132.2C1354.0,136.3 1348.3,152.7 1343.7,162.0C1337.0,175.4 1326.7,185.2 1311.7,192.4C1304.1,196.1 1286.5,202.0 1283.2,202.0C1281.7,202.0 1279.8,202.4 1279.0,203.0C1277.2,204.1 1277.4,204.2 1287.5,206.6C1304.6,210.6 1321.8,219.1 1330.8,227.9C1339.1,236.0 1346.5,250.4 1350.5,266.2C1353.7,278.9 1354.1,280.0 1354.8,280.0C1355.2,280.0 1356.1,277.2 1356.7,273.8ZM1190.9,255.8C1194.1,249.0 1211.9,213.2 1230.4,176.1C1255.4,126.1 1265.2,107.3 1268.5,103.5C1274.3,96.6 1284.7,89.6 1294.0,86.2L1301.5,83.5L1351.7,83.0L1401.8,82.5L1423.7,59.6C1456.2,25.6 1469.0,11.6 1468.6,10.5C1468.4,9.8 1434.5,9.5 1369.4,9.5L1270.5,9.5L1261.6,11.8C1243.0,16.5 1228.4,24.9 1214.0,39.3C1204.2,49.0 1200.6,54.2 1191.5,71.5C1181.9,89.8 1151.9,145.3 1151.0,146.5C1148.9,149.3 1126.7,191.5 1125.4,195.2C1120.8,208.3 1121.6,225.4 1127.6,237.8C1134.3,251.6 1149.3,263.3 1163.9,266.0C1166.9,266.6 1169.6,267.2 1169.8,267.5C1170.1,267.8 1173.7,268.0 1177.7,268.0L1185.1,268.0L1190.9,255.8Z"/></svg></div>
+    <nav id="nav"></nav>
+    <div class="me"><b id="meName"></b><span id="meRole"></span><br><button id="logout" type="button">Sign out</button></div>
+  </aside>
+  <main>
+    <div class="bar"><div><h1 id="title">Overview</h1><p class="muted small" id="subtitle"></p></div>
+      <div class="mode sa" id="modeBox"><span class="lbl">Payments</span><div class="seg" role="group" aria-label="Payment mode"><button type="button" data-mode="test" aria-pressed="false">Test</button><button type="button" data-mode="live" aria-pressed="false">Live</button></div></div></div>
+
+    <!-- OVERVIEW -->
+    <section data-page="overview" class="grid">
+      <div class="strip" id="figures"></div>
+      <div class="two">
+        <div class="card"><div class="head"><h2>Needs attention</h2><button class="btn ghost sm" data-goto="stores" data-filter="empty">All stores</button></div><div id="attention"></div></div>
+        <div class="card sa"><div class="head"><h2>Latest payments</h2><button class="btn ghost sm" data-goto="payments">All payments</button></div><div id="latest"></div></div>
+      </div>
+    </section>
+
+    <!-- STORES -->
+    <section data-page="stores" class="card hidden">
+      <div class="head"><div class="chips" id="storeChips"></div><input type="search" id="storeQ" placeholder="Search stores or accounts" style="max-width:280px"></div>
+      <div id="storeList"></div>
+    </section>
+
+    <!-- CREDIT LOGIC -->
+    <section data-page="logic" class="grid hidden sa">
+      <div class="card grid">
+        <div><h2>How stores buy credits</h2><p class="muted small" style="margin-top:4px">Stores only see the price, the credits and how many images that makes. Your cost and profit stay here.</p></div>
+        <div class="models">
+          <label class="model"><input type="radio" name="model" value="packs"><span><b>Credit packs</b><span class="muted small">Stores pick a pack, e.g. $10 for 500 credits.</span></span></label>
+          <label class="model"><input type="radio" name="model" value="amount"><span><b>Any amount</b><span class="muted small">Stores choose how much to pay at a fixed rate, e.g. 50 credits per $1.</span></span></label>
+        </div>
+        <div class="fields">
+          <label class="f">Credits per image<input type="number" id="perTryon" min="0.01" step="1"><span class="hint">Used for each successful preview.</span></label>
+          <label class="f">Smallest purchase (credits)<input type="number" id="minCredits" min="0" step="1"><span class="hint">Packs below this are hidden from stores.</span></label>
+          <label class="f">Stores pay in<input type="text" id="currency" maxlength="3"></label>
+          <label class="f">Welcome credits<input type="number" id="welcome" min="0" step="1"><span class="hint">Free credits for a newly installed store.</span></label>
+          <label class="f">Low-credit warning below<input type="number" id="lowWarn" min="0" step="1"><span class="hint">Images left.</span></label>
+        </div>
+        <div id="packFields" class="grid">
+          <h3>Packs</h3>
+          <div class="pack muted small"><span>Name (optional)</span><span>Price</span><span>Credits</span><span>Highlight</span><span></span></div>
+          <div class="packs" id="packs"></div>
+          <div><button type="button" class="btn ghost sm" id="addPack">Add pack</button></div>
+        </div>
+        <div id="amountFields" class="fields hidden">
+          <label class="f">Credits per 1.00<input type="number" id="perUnit" min="0.001" step="1"><span class="hint" id="perUnitHint"></span></label>
+          <label class="f">Smallest payment<input type="number" id="min" min="0.5" step="0.01"></label>
+          <label class="f">Largest payment<input type="number" id="max" min="1" step="0.01"></label>
+          <label class="f">Suggested amounts<input type="text" id="quick" placeholder="10, 20, 50, 100"></label>
+        </div>
+      </div>
+      <div class="card grid">
+        <div class="head" style="margin:0"><div><h2>Your cost and profit</h2><p class="muted small" style="margin-top:4px">Before payment fees, taxes, hosting and other expenses.</p></div></div>
+        <div class="fields">
+          <label class="f">Cost per image<input type="number" id="aiCost" min="0" step="0.01"><span class="hint">What one AI image costs you.</span></label>
+          <label class="f">Cost currency<input type="text" id="costCur" maxlength="3"></label>
+          <label class="f" id="fxWrap">Exchange rate<input type="number" id="fx" min="0.0001" step="0.01"><span class="hint" id="fxHint"></span></label>
+        </div>
+        <div class="tbl"><table class="econ"><thead><tr><th>Package</th><th class="num">Credits</th><th class="num">Images</th><th class="num">Revenue</th><th class="num">Image cost</th><th class="num">Gross profit</th><th class="num">Margin</th></tr></thead><tbody id="econ"></tbody></table></div>
+        <div class="profit" id="profit"></div>
+      </div>
+      <div class="savebar"><span class="status" id="logicStatus">Changes apply to new purchases and previews.</span><button class="btn lens" id="logicSave" type="button">Save credit logic</button></div>
+    </section>
+
+    <!-- PAYMENTS -->
+    <section data-page="payments" class="grid hidden sa">
+      <div class="card grid">
+        <div class="head" style="margin:0"><div><h2>Ways to pay</h2><p class="muted small" style="margin-top:4px">Keys are kept separately for test and live. Stores see the methods that are switched on and have keys for the current mode.</p></div></div>
+        <label class="model" style="cursor:pointer"><input type="checkbox" id="appStore"><span><b>Listed on the Shopify App Store</b><span class="muted small">Shopify requires App Store apps to charge through Shopify Billing, so only that is offered.</span></span></label>
+        <label class="model" style="cursor:pointer"><input type="checkbox" id="instant"><span><b>Test payment button in test mode</b><span class="muted small">Stores in test mode can add credits instantly with no gateway. Never shown in live mode.</span></span></label>
+        <div class="gws" id="gws"></div>
+        <div class="row"><span class="status" id="gwStatus"></span><span style="flex:1"></span><button class="btn lens" id="gwSave" type="button">Save payment settings</button></div>
+      </div>
+      <div class="card">
+        <div class="head"><h2>Payments</h2><div class="chips" id="payChips"></div></div>
+        <div id="payList"></div>
+      </div>
+      <div class="card">
+        <div class="head"><div><h2>Revenue by store</h2><p class="muted small" style="margin-top:4px">Live payments only, before payment fees, taxes and other expenses.</p></div><span class="muted small" id="testNote"></span></div>
+        <div id="revList"></div>
+      </div>
+    </section>
+
+    <!-- ACCOUNTS -->
+    <section data-page="accounts" class="grid hidden sa">
+      <div class="card"><div class="head"><h2>Accounts</h2></div><div id="accList"></div></div>
+      <div class="card grid"><div><h2>Add an account</h2><p class="muted small" style="margin-top:4px">Stores that install from Shopify get an account automatically. Use this for clients you onboard yourself.</p></div>
+        <form id="accForm" class="fields"><label class="f">Name<input id="aName" required maxlength="100"></label><label class="f">Email<input id="aEmail" type="email" required></label><label class="f">Temporary password<input id="aPass" type="password" minlength="12" required autocomplete="new-password"><span class="hint">At least 12 characters.</span></label><div style="align-self:end"><button class="btn">Create account</button></div></form>
+        <p class="status" id="accStatus"></p></div>
+    </section>
+
+    <!-- ACTIVITY -->
+    <section data-page="activity" class="card hidden sa"><div id="actList"></div></section>
+  </main>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-label="Store details"></aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = (x) => String(x ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const n = (x, d = 0) => Number(x || 0).toLocaleString(undefined, { maximumFractionDigits: d });
+  let CUR = 'USD';
+  const money = (x, cur = CUR) => { try { return new Intl.NumberFormat(undefined, { style: 'currency', currency: cur, maximumFractionDigits: 2 }).format(x || 0); } catch { return `${Number(x || 0).toFixed(2)} ${cur}`; } };
+  const when = (t) => (t ? new Date(t).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : '–');
+  const day = (t) => (t ? new Date(t).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' }) : '–');
+  let toastT; const toast = (m) => { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 2400); };
+  async function api(url, o = {}) {
+    const r = await fetch(url, { credentials: 'same-origin', ...o, headers: { 'Content-Type': 'application/json', ...(o.headers || {}) } });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || (r.status === 403 ? 'You do not have access to this.' : 'That did not work. Please try again.'));
+    return j;
+  }
+  function pager(pg, onGo) {
+    if (!pg || pg.total <= pg.pageSize) return pg && pg.total ? `<div class="pager"><span>${n(pg.total)} total</span></div>` : '';
+    const from = (pg.page - 1) * pg.pageSize + 1, to = Math.min(pg.total, pg.page * pg.pageSize);
+    const id = 'pg' + Math.random().toString(36).slice(2, 8);
+    setTimeout(() => { const el = document.getElementById(id); if (el) el.addEventListener('click', (e) => { const b = e.target.closest('[data-go]'); if (b && !b.disabled) onGo(Number(b.dataset.go)); }); });
+    return `<div class="pager" id="${id}"><span>${n(from)}–${n(to)} of ${n(pg.total)}</span><div class="b"><button class="btn ghost sm" data-go="${pg.page - 1}" ${pg.page <= 1 ? 'disabled' : ''}>Previous</button><span>Page ${pg.page} of ${pg.pages}</span><button class="btn ghost sm" data-go="${pg.page + 1}" ${pg.page >= pg.pages ? 'disabled' : ''}>Next</button></div></div>`;
+  }
+  const loading = (el) => { el.innerHTML = '<div class="skeleton"></div><div class="skeleton" style="width:70%"></div><div class="skeleton" style="width:50%"></div>'; };
+  const statusTag = (s) => s.status !== 'installed' ? '<span class="tag">Disconnected</span>' : !s.billed ? '<span class="tag">Not billed</span>' : s.credits.empty ? '<span class="tag bad">Out of credit</span>' : s.credits.low ? '<span class="tag warn">Low credit</span>' : '<span class="tag ok">Active</span>';
+  const payTag = (p) => ({ paid: '<span class="tag ok">Paid</span>', pending: '<span class="tag warn">Waiting</span>', cancelled: '<span class="tag">Cancelled</span>', failed: '<span class="tag bad">Failed</span>' }[p.status] || esc(p.status));
+  const icons = {
+    overview: '<path d="M3 13h8V3H3zM13 21h8V11h-8zM3 21h8v-6H3zM13 3v6h8V3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
+    stores: '<path d="M4 9l1.5-5h13L20 9M4 9v11h16V9M4 9h16M9 20v-6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
+    logic: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v10M9 9.5c0-1.2 1.3-2 3-2s3 .8 3 2-1.3 1.8-3 2.2-3 1-3 2.3 1.3 2 3 2 3-.8 3-2" fill="none" stroke="currentColor" stroke-width="1.6"/>',
+    payments: '<rect x="3" y="5.5" width="18" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="1.8"/>',
+    accounts: '<circle cx="12" cy="8.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+    activity: '<path d="M3 12h4l3-7 4 14 3-7h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
+  };
+  let me = null, settings = null, hooks = null;
+  const SA = () => me.role === 'superadmin';
+
+  // ---------- navigation ----------
+  const PAGES = { overview: ['Overview', 'How the platform is doing'], stores: ['Stores', 'Every store that installed lookOn'], logic: ['Credit logic', 'How payments turn into credits'], payments: ['Payments', 'Ways to pay, payments and revenue'], accounts: ['Accounts', 'People who can sign in'], activity: ['Activity', 'Everything that changed, newest first'] };
+  function buildNav() {
+    const list = SA() ? Object.keys(PAGES) : ['overview', 'stores'];
+    $('#nav').innerHTML = list.map((k) => `<button type="button" data-page="${k}"><svg viewBox="0 0 24 24" aria-hidden="true">${icons[k]}</svg>${PAGES[k][0]}</button>`).join('');
+    document.querySelectorAll('.sa').forEach((el) => el.classList.toggle('hidden', !SA()));
+  }
+  $('#nav').addEventListener('click', (e) => { const b = e.target.closest('[data-page]'); if (b) show(b.dataset.page); });
+  document.addEventListener('click', (e) => { const b = e.target.closest('[data-goto]'); if (!b) return; if (b.dataset.filter) { stores.filter = b.dataset.filter; stores.page = 1; } show(b.dataset.goto); });
+  function show(page) {
+    document.querySelectorAll('#nav [data-page]').forEach((b) => b.setAttribute('aria-current', String(b.dataset.page === page)));
+    document.querySelectorAll('main [data-page]').forEach((s) => s.classList.toggle('hidden', s.dataset.page !== page || (s.classList.contains('sa') && !SA())));
+    $('#title').textContent = PAGES[page][0]; $('#subtitle').textContent = PAGES[page][1];
+    ({ overview: loadOverview, stores: loadStores, logic: fillLogic, payments: loadPayments, accounts: loadAccounts, activity: loadActivity })[page]();
+    history.replaceState(null, '', '#' + page);
+  }
+
+  // ---------- session ----------
+  async function boot() {
+    try {
+      me = await api('/panel/api/me');
+      $('#login').classList.add('hidden'); $('#app').classList.remove('hidden');
+      $('#meName').textContent = me.name || me.email; $('#meRole').textContent = SA() ? 'Super admin' : 'Account';
+      buildNav();
+      if (SA()) { const d = await api('/panel/api/billing/settings'); settings = d.settings; hooks = d.webhookUrls; CUR = settings.currency; modeUi(); }
+      const start = (location.hash || '#overview').slice(1);
+      show(PAGES[start] && (SA() || ['overview', 'stores'].includes(start)) ? start : 'overview');
+    } catch { $('#app').classList.add('hidden'); $('#login').classList.remove('hidden'); }
+  }
+  $('#loginForm').addEventListener('submit', async (e) => { e.preventDefault(); $('#loginErr').textContent = ''; try { await api('/panel/api/login', { method: 'POST', body: JSON.stringify({ email: $('#email').value, password: $('#password').value }) }); boot(); } catch (x) { $('#loginErr').textContent = x.message; } });
+  $('#logout').addEventListener('click', async () => { await api('/panel/api/logout', { method: 'POST', body: '{}' }).catch(() => {}); location.reload(); });
+
+  // ---------- test / live ----------
+  function modeUi() { document.querySelectorAll('#modeBox [data-mode]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === settings.mode))); }
+  $('#modeBox').addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-mode]'); if (!b || b.dataset.mode === settings.mode) return;
+    if (b.dataset.mode === 'live' && !confirm('Switch to live? Stores will pay real money with your live keys. Stores set to test stay in test.')) return;
+    try { const d = await api('/panel/api/billing/settings', { method: 'PUT', body: JSON.stringify({ mode: b.dataset.mode }) }); settings = d.settings; modeUi(); toast(settings.mode === 'live' ? 'Live mode on' : 'Test mode on'); }
+    catch (x) { alert(x.message); }
+  });
+
+  // ---------- overview ----------
+  async function loadOverview() {
+    loading($('#attention'));
+    const [ov, rep, pays] = await Promise.all([
+      api('/panel/api/overview?pageSize=6&filter=empty'),
+      SA() ? api('/panel/api/billing/report?pageSize=1').catch(() => null) : null,
+      SA() ? api('/panel/api/payments?pageSize=6').catch(() => null) : null,
+    ]);
+    const s = ov.stats;
+    const figs = [];
+    if (rep) figs.push(['Revenue', money(rep.totals.revenue, rep.currency), rep.currency !== rep.costCurrency ? `${money(rep.totals.revenueCc, rep.costCurrency)}, live payments` : 'live payments'], ['Gross profit so far', money(rep.totals.profit, rep.costCurrency), `image cost ${money(rep.totals.imageCost, rep.costCurrency)}`], ['Margin if all credits are used', rep.totals.margin === null ? '–' : `${n(rep.totals.margin, 1)}%`, `${money(rep.totals.potentialProfit, rep.costCurrency)} gross profit`], ['Images made', n(rep.totals.images), `${n(rep.totals.creditsSold)} credits sold`]);
+    figs.push(['Active stores', n(s.active), `${n(s.stores)} installed in total`], ['Out of credit', n(s.outOfCredit), `${n(s.lowCredit)} running low`]);
+    $('#figures').innerHTML = figs.map(([l, v, sub]) => `<div><span>${l}</span><b>${v}</b><small>${esc(sub)}</small></div>`).join('');
+    let att = ov.items;
+    if (att.length < 6) { const low = await api('/panel/api/overview?pageSize=6&filter=low'); att = att.concat(low.items.filter((x) => !att.some((y) => y.shop === x.shop))).slice(0, 6); }
+    $('#attention').innerHTML = att.length ? `<table><tbody>${att.map((x) => `<tr class="click" data-shop="${esc(x.shop)}"><td><b>${esc(x.shop)}</b><div class="muted small">${esc(x.owner)}</div></td><td>${statusTag(x)}</td><td class="num">${n(x.credits.credits)} credits</td></tr>`).join('')}</tbody></table>` : '<div class="empty">Every store has credit.</div>';
+    if (pays) $('#latest').innerHTML = pays.items.length ? `<table><tbody>${pays.items.map((p) => `<tr><td><b>${esc(p.shop)}</b><div class="muted small">${when(p.createdAt)} · ${esc(p.method)}</div></td><td>${p.mode === 'test' ? '<span class="tag warn">Test</span>' : ''} ${payTag(p)}</td><td class="num"><b>${money(p.amount, p.currency)}</b><div class="muted small">${n(p.credits)} credits</div></td></tr>`).join('')}</tbody></table>` : '<div class="empty">No payments yet.</div>';
+  }
+  $('#attention').addEventListener('click', (e) => { const r = e.target.closest('[data-shop]'); if (r) openStore(r.dataset.shop); });
+
+  // ---------- stores ----------
+  const stores = { page: 1, q: '', filter: '' };
+  const FILTERS = [['', 'All'], ['active', 'Active'], ['low', 'Low credit'], ['empty', 'Out of credit'], ['test', 'Test mode'], ['disconnected', 'Disconnected']];
+  async function loadStores() {
+    $('#storeChips').innerHTML = FILTERS.map(([v, l]) => `<button type="button" data-f="${v}" aria-pressed="${v === stores.filter}">${l}</button>`).join('');
+    loading($('#storeList'));
+    try {
+      const d = await api(`/panel/api/overview?page=${stores.page}&pageSize=12&q=${encodeURIComponent(stores.q)}&filter=${stores.filter}`);
+      CUR = d.currency || CUR;
+      $('#storeList').innerHTML = d.items.length ? `<div class="tbl"><table><thead><tr><th>Store</th><th>Status</th><th class="num">Credits</th><th>Try-ons left</th><th>Mode</th><th>Last try-on</th></tr></thead><tbody>${d.items.map((s) => {
+        const pct = Math.min(100, s.credits.tryonsLeft / Math.max(50, s.credits.tryonsLeft) * 100);
+        return `<tr class="click" data-shop="${esc(s.shop)}"><td><b>${esc(s.shop)}</b><div class="muted small">${esc(s.owner)} · ${n(s.products)} products</div></td><td>${statusTag(s)}</td><td class="num"><b>${n(s.credits.credits)}</b></td><td><span class="meter"><i style="width:${pct}%"></i></span>${n(s.credits.tryonsLeft)}</td><td>${s.mode === 'test' ? '<span class="tag warn">Test</span>' : '<span class="tag ok">Live</span>'}${s.billingMode ? ' <span class="muted small">set for store</span>' : ''}</td><td class="muted">${day(s.lastTryOnAt)}</td></tr>`;
+      }).join('')}</tbody></table></div>${pager(d, (p) => { stores.page = p; loadStores(); })}` : `<div class="empty">${stores.q || stores.filter ? 'No stores match.' : 'No stores yet. They appear here when they install lookOn from Shopify.'}</div>`;
+    } catch (e) { $('#storeList').innerHTML = `<div class="empty">${esc(e.message)}</div>`; }
+  }
+  $('#storeChips').addEventListener('click', (e) => { const b = e.target.closest('[data-f]'); if (!b) return; stores.filter = b.dataset.f; stores.page = 1; loadStores(); });
+  let sq; $('#storeQ').addEventListener('input', () => { clearTimeout(sq); sq = setTimeout(() => { stores.q = $('#storeQ').value.trim(); stores.page = 1; loadStores(); }, 250); });
+  $('#storeList').addEventListener('click', (e) => { const r = e.target.closest('[data-shop]'); if (r) openStore(r.dataset.shop); });
+
+  // ---------- store drawer ----------
+  let current = null, ledgerPage = 1, accounts = null;
+  async function openStore(shop) {
+    $('#scrim').classList.add('open'); $('#drawer').classList.add('open'); $('#drawer').setAttribute('aria-hidden', 'false');
+    $('#drawer').innerHTML = '<header><h2>Loading…</h2></header><div class="body"><div class="skeleton"></div></div>';
+    const d = await api(`/panel/api/overview?q=${encodeURIComponent(shop)}&pageSize=50`);
+    current = d.items.find((x) => x.shop === shop); ledgerPage = 1;
+    if (SA() && !accounts) accounts = (await api('/panel/api/admins')).admins;
+    renderDrawer();
+  }
+  function closeDrawer() { $('#scrim').classList.remove('open'); $('#drawer').classList.remove('open'); $('#drawer').setAttribute('aria-hidden', 'true'); current = null; }
+  $('#scrim').addEventListener('click', closeDrawer);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && current) closeDrawer(); });
+  function renderDrawer() {
+    const s = current, p = s.pricing;
+    $('#drawer').innerHTML = `<header><div><h2>${esc(s.shop)}</h2><p class="muted small">${esc(s.owner)} · installed ${day(s.installedAt)}</p><div style="margin-top:8px">${statusTag(s)} ${s.mode === 'test' ? '<span class="tag warn">Test mode</span>' : '<span class="tag ok">Live</span>'}</div></div><button class="btn ghost sm" id="dClose" type="button" aria-label="Close">Close</button></header>
+    <div class="body">
+      <div class="kv"><div><span>Credits</span><b>${n(s.credits.credits)}</b></div><div><span>Images left</span><b>${n(s.credits.tryonsLeft)}</b></div><div><span>Credits used</span><b>${n(s.credits.used)}</b></div></div>
+      ${SA() ? `
+      <section><h3>Add or remove credits</h3><form class="row" id="dCredit"><input type="number" name="credits" step="1" placeholder="e.g. 100 or -20" required style="max-width:160px"><input type="text" name="note" placeholder="Reason (shown to the store)"><button class="btn">Apply</button></form></section>
+      <section><h3>Pricing for this store</h3><p class="muted small">Give this store extra credits on every purchase, or fewer. Leave empty for the normal packs.</p>
+        <form class="grid" id="dPricing"><div class="row"><label class="f" style="flex:1">Bonus credits (%)<input type="number" name="bonus" min="-90" max="500" step="1" value="${p.bonusPct || ''}" placeholder="0"></label>
+        <label class="f" style="flex:1">Payment mode<select name="mode"><option value="">Platform (${settings.mode})</option><option value="test" ${s.billingMode === 'test' ? 'selected' : ''}>Test for this store</option><option value="live" ${s.billingMode === 'live' ? 'selected' : ''}>Live for this store</option></select></label>
+        <label class="f" style="flex:1">Ways to pay<select name="channel"><option value="">All switched-on methods</option><option value="shopify" ${s.billingChannel === 'shopify' ? 'selected' : ''}>Shopify bill only</option><option value="external" ${s.billingChannel === 'external' ? 'selected' : ''}>Stripe / Razorpay only</option></select></label></div>
+        <div><button class="btn ghost">Save pricing</button></div></form></section>
+      <section><h3>Account</h3><form class="row" id="dOwner"><select name="owner"><option value="">No account</option>${(accounts || []).map((a) => `<option value="${esc(a.id)}" ${a.id === s.ownerId ? 'selected' : ''} ${a.active ? '' : 'disabled'}>${esc(a.name || a.email)}${a.active ? '' : ' (suspended)'}</option>`).join('')}</select><button class="btn ghost">Save</button></form></section>` : ''}
+      <section><div class="head" style="margin:0"><h3>Credit history</h3></div><div id="dLedger"></div></section>
+      ${SA() ? `<section><h3>Store</h3><div class="row"><button class="btn ghost sm" id="dSync" type="button" ${s.status !== 'installed' ? 'disabled' : ''}>Refresh products</button>${s.status === 'installed' ? '<button class="btn danger sm" id="dDisc" type="button">Mark disconnected</button>' : '<button class="btn danger sm" id="dRemove" type="button">Remove store</button>'}</div><p class="status" id="dStatus"></p></section>` : ''}
+    </div>`;
+    $('#dClose').onclick = closeDrawer;
+    loadLedger();
+    if (!SA()) return;
+    const done = async (msg) => { toast(msg); const d = await api(`/panel/api/overview?q=${encodeURIComponent(s.shop)}&pageSize=50`); current = d.items.find((x) => x.shop === s.shop) || current; renderDrawer(); if (!$('[data-page=stores]').classList.contains('hidden')) loadStores(); };
+    const err = (x) => { $('#dStatus').textContent = x.message; $('#dStatus').className = 'status err'; };
+    $('#dCredit').onsubmit = async (e) => { e.preventDefault(); const f = e.target; const c = Number(f.credits.value); if (!confirm(`${c > 0 ? 'Add' : 'Remove'} ${n(Math.abs(c))} credits ${c > 0 ? 'to' : 'from'} ${s.shop}?`)) return; try { await api(`/panel/api/shops/${encodeURIComponent(s.shop)}/credits`, { method: 'POST', body: JSON.stringify({ credits: c, note: f.note.value }) }); done(`${c > 0 ? 'Added' : 'Removed'} ${n(Math.abs(c))} credits`); } catch (x) { err(x); } };
+    $('#dPricing').onsubmit = async (e) => { e.preventDefault(); const f = e.target; try { await api(`/panel/api/shops/${encodeURIComponent(s.shop)}/pricing`, { method: 'PATCH', body: JSON.stringify({ bonusPct: f.bonus.value === '' ? null : Number(f.bonus.value), billingMode: f.mode.value, billingChannel: f.channel.value }) }); done('Pricing saved'); } catch (x) { err(x); } };
+    $('#dOwner').onsubmit = async (e) => { e.preventDefault(); try { await api(`/panel/api/shops/${encodeURIComponent(s.shop)}/owner`, { method: 'PATCH', body: JSON.stringify({ ownerId: e.target.owner.value }) }); done('Account saved'); } catch (x) { err(x); } };
+    const sync = $('#dSync'); if (sync) sync.onclick = async () => { sync.disabled = true; sync.textContent = 'Refreshing…'; try { const r = await api('/panel/api/catalog/sync', { method: 'POST', body: JSON.stringify({ shop: s.shop }) }); done(`${n(r.products)} products refreshed`); } catch (x) { err(x); sync.disabled = false; sync.textContent = 'Refresh products'; } };
+    const disc = $('#dDisc'); if (disc) disc.onclick = async () => { if (!confirm('Mark this store disconnected? Its credits and history are kept.')) return; try { await api(`/panel/api/shops/${encodeURIComponent(s.shop)}/disconnect`, { method: 'POST' }); done('Store disconnected'); } catch (x) { err(x); } };
+    const rm = $('#dRemove'); if (rm) rm.onclick = async () => { if (!confirm('Remove this store and its product list for good? Payment records are kept.')) return; try { await api(`/panel/api/shops/${encodeURIComponent(s.shop)}`, { method: 'DELETE' }); closeDrawer(); toast('Store removed'); loadStores(); } catch (x) { err(x); } };
+  }
+  const what = (l) => ({ topup: `Bought${l.gateway ? ' · ' + esc(l.gateway) : ''}`, tryon: l.product ? `Try-on · ${esc(l.product)}` : 'Try-on', adjustment: `Adjusted${l.note ? ' · ' + esc(l.note) : ''}`, welcome: 'Welcome credits', migration: 'Carried over', conversion: 'Converted to credits' }[l.type] || esc(l.type));
+  async function loadLedger() {
+    const box = $('#dLedger'); if (!box) return; loading(box);
+    try {
+      const d = await api(`/panel/api/shops/${encodeURIComponent(current.shop)}/ledger?page=${ledgerPage}&pageSize=10`);
+      box.innerHTML = d.items.length ? `<table><tbody>${d.items.map((l) => `<tr><td class="muted small">${when(l.at)}</td><td>${what(l)}${l.mode === 'test' ? ' <span class="tag warn">test</span>' : ''}${l.tries > 1 ? ` <span class="muted small">${l.tries} AI calls</span>` : ''}</td><td class="num" style="color:${l.credits > 0 ? 'var(--ok)' : 'inherit'}">${l.credits > 0 ? '+' : ''}${n(l.credits, 2)}</td><td class="num muted">${n(l.balance, 2)}</td></tr>`).join('')}</tbody></table>${pager(d, (p) => { ledgerPage = p; loadLedger(); })}` : '<div class="empty">No credit activity yet.</div>';
+    } catch (e) { box.innerHTML = `<div class="empty">${esc(e.message)}</div>`; }
+  }
+
+  // ---------- credit logic ----------
+  let draftPacks = [], pickRow = 0;
+  const v = (id) => Number($(id).value) || 0;
+  const cur = () => ($('#currency').value || CUR).toUpperCase();
+  const costCur = () => ($('#costCur').value || cur()).toUpperCase();
+  function fillLogic() {
+    const st = settings;
+    document.querySelectorAll('[name=model]').forEach((r) => { r.checked = r.value === st.creditModel; });
+    $('#perTryon').value = st.creditsPerTryon; $('#minCredits').value = st.minPurchaseCredits; $('#currency').value = st.currency; $('#welcome').value = st.welcomeCredits; $('#lowWarn').value = st.lowBalanceTryons;
+    $('#perUnit').value = st.creditsPerUnit; $('#min').value = st.minTopup; $('#max').value = st.maxTopup; $('#quick').value = st.quickAmounts.join(', ');
+    $('#aiCost').value = st.aiCostPerImage; $('#costCur').value = st.costCurrency; $('#fx').value = st.fxRate;
+    draftPacks = st.packs.map((p) => ({ ...p }));
+    pickRow = Math.max(0, draftPacks.length - 1);
+    renderPacks(); modelUi();
+  }
+  const model = () => document.querySelector('[name=model]:checked')?.value || 'packs';
+  function modelUi() { $('#packFields').classList.toggle('hidden', model() !== 'packs'); $('#amountFields').classList.toggle('hidden', model() !== 'amount'); econ(); }
+  document.querySelectorAll('[name=model]').forEach((r) => r.addEventListener('change', () => { pickRow = 0; modelUi(); }));
+  function renderPacks() {
+    $('#packs').innerHTML = draftPacks.map((p, i) => `<div class="pack" data-i="${i}"><input type="text" data-k="name" placeholder="e.g. Starter" value="${esc(p.name || '')}"><input type="number" data-k="price" min="0.5" step="0.01" placeholder="Price" value="${p.price}"><input type="number" data-k="credits" min="1" step="1" placeholder="Credits" value="${p.credits}"><label class="row small"><input type="radio" name="popular" ${p.popular ? 'checked' : ''}> Most chosen</label><button type="button" class="btn ghost sm" data-del="${i}" aria-label="Remove pack">Remove</button></div>`).join('');
+  }
+  $('#packs').addEventListener('input', (e) => { const row = e.target.closest('[data-i]'); if (!row) return; const p = draftPacks[row.dataset.i]; if (e.target.name === 'popular') draftPacks.forEach((x, i) => { x.popular = String(i) === row.dataset.i; }); else p[e.target.dataset.k] = e.target.dataset.k === 'name' ? e.target.value : Number(e.target.value); econ(); });
+  $('#packs').addEventListener('click', (e) => { const b = e.target.closest('[data-del]'); if (!b) return; draftPacks.splice(Number(b.dataset.del), 1); pickRow = Math.min(pickRow, draftPacks.length - 1); renderPacks(); econ(); });
+  $('#addPack').addEventListener('click', () => { if (draftPacks.length >= 8) return; const last = draftPacks[draftPacks.length - 1] || { price: 10, credits: 500 }; draftPacks.push({ price: last.price * 2, credits: last.credits * 2 }); renderPacks(); econ(); });
+  document.querySelector('[data-page=logic]').addEventListener('input', (e) => { if (!e.target.closest('#packs')) econ(); });
+  $('#econ').addEventListener('click', (e) => { const r = e.target.closest('[data-row]'); if (r) { pickRow = Number(r.dataset.row); econ(); } });
+  function rows() {
+    if (model() === 'packs') return draftPacks.map((p) => ({ label: p.name || money(p.price, cur()), price: Number(p.price) || 0, credits: Number(p.credits) || 0, hidden: (Number(p.credits) || 0) < v('#minCredits') }));
+    return String($('#quick').value).split(',').map((x) => Number(x.trim())).filter((x) => x > 0).map((a) => ({ label: money(a, cur()), price: a, credits: Math.floor(a * v('#perUnit') + 1e-9) }));
+  }
+  function econ() {
+    const same = cur() === costCur();
+    $('#fxWrap').classList.toggle('hidden', same);
+    const fx = same ? 1 : v('#fx') || 1, per = v('#perTryon') || 1, cost = v('#aiCost');
+    $('#fxHint').textContent = `1 ${cur()} = ${n(fx, 4)} ${costCur()}`;
+    $('#perUnitHint').textContent = `${n(v('#perUnit'))} credits per ${cur()} 1 = ${n(v('#perUnit') / per, 2)} images per ${cur()} 1`;
+    const cm = (x) => money(x, costCur());
+    const list = rows().map((r) => { const images = Math.floor(r.credits / per), revenue = r.price * fx, c = images * cost, profit = revenue - c; return { ...r, images, revenue, cost: c, profit, margin: revenue > 0 ? profit / revenue * 100 : 0 }; });
+    pickRow = Math.min(Math.max(0, pickRow), Math.max(0, list.length - 1));
+    $('#econ').innerHTML = list.length ? list.map((r, i) => `<tr data-row="${i}" aria-selected="${i === pickRow}"><td><b>${esc(r.label)}</b>${r.label !== money(r.price, cur()) ? ` <span class="muted small">${money(r.price, cur())}</span>` : ''}${r.hidden ? ' <span class="tag">below minimum</span>' : ''}</td><td class="num">${n(r.credits)}</td><td class="num">${n(r.images)}</td><td class="num">${cm(r.revenue)}</td><td class="num">${cm(r.cost)}</td><td class="num" style="color:${r.profit < 0 ? 'var(--bad)' : 'var(--ok)'}"><b>${cm(r.profit)}</b></td><td class="num">${n(r.margin, 1)}%</td></tr>`).join('') : '<tr><td colspan="7" class="empty">Add a pack or a suggested amount.</td></tr>';
+    const r = list[pickRow];
+    $('#profit').innerHTML = r ? `<div class="big"><span>Gross profit on ${esc(r.label)}</span><b class="${r.profit < 0 ? 'neg' : ''}">${cm(r.profit)}</b><span>${n(r.margin, 1)}% margin</span></div>
+      <dl><dt>Store pays</dt><dd>${money(r.price, cur())}${same ? '' : ` = ${cm(r.revenue)}`}</dd><dt>Store gets</dt><dd>${n(r.credits)} credits = ${n(r.images)} images</dd><dt>Image cost if all are used</dt><dd>${n(r.images)} × ${cm(cost)} = ${cm(r.cost)}</dd><dt>Gross profit</dt><dd>${cm(r.profit)}</dd></dl>` : '';
+  }
+  $('#logicSave').addEventListener('click', async () => {
+    const b = $('#logicSave'), st = $('#logicStatus'); b.disabled = true; st.className = 'status'; st.textContent = 'Saving…';
+    try {
+      const d = await api('/panel/api/billing/settings', { method: 'PUT', body: JSON.stringify({
+        creditModel: model(), packs: draftPacks, creditsPerTryon: v('#perTryon'), minPurchaseCredits: v('#minCredits'), currency: $('#currency').value, welcomeCredits: v('#welcome'), lowBalanceTryons: v('#lowWarn'),
+        creditsPerUnit: v('#perUnit'), minTopup: v('#min'), maxTopup: v('#max'), quickAmounts: $('#quick').value,
+        aiCostPerImage: v('#aiCost'), costCurrency: $('#costCur').value, fxRate: v('#fx') || 1,
+      }) });
+      settings = d.settings; CUR = settings.currency; fillLogic(); st.className = 'status ok'; st.textContent = 'Saved. New purchases and previews use this.'; toast('Credit logic saved');
+    } catch (x) { st.className = 'status err'; st.textContent = x.message; }
+    finally { b.disabled = false; }
+  });
+
+  // ---------- payments ----------
+  const keyTab = { stripe: 'test', razorpay: 'test' };
+  const GW = {
+    shopify: { name: 'Shopify Billing', about: 'Charged on the store\'s Shopify bill. In test mode Shopify makes test charges.', fields: [] },
+    stripe: { name: 'Stripe', about: 'Card payments on Stripe Checkout. Webhook events: checkout.session.completed, checkout.session.expired.', fields: [['secretKey', 'Secret key', 'sk_…', true], ['webhookSecret', 'Webhook signing secret', 'whsec_…', true]] },
+    razorpay: { name: 'Razorpay', about: 'UPI, cards and netbanking. Webhook events: order.paid, payment.failed.', fields: [['keyId', 'Key ID', 'rzp_…', false], ['keySecret', 'Key secret', '', true], ['webhookSecret', 'Webhook secret', '', true]] },
+  };
+  const gwDraft = {};
+  function renderGateways() {
+    $('#appStore').checked = settings.appStoreMode; $('#instant').checked = settings.allowInstantTest;
+    $('#gws').innerHTML = Object.entries(GW).map(([id, g]) => {
+      const cur = settings.gateways[id], on = gwDraft[id]?.enabled ?? cur.enabled, m = keyTab[id];
+      return `<div class="gw" data-gw="${id}"><div class="top"><b>${g.name}</b><button type="button" class="toggle" role="switch" aria-checked="${on}" data-on="${id}" aria-label="${g.name} on or off"></button></div><p class="muted small">${g.about}</p>
+      ${g.fields.length ? `<div class="keytabs" role="group" aria-label="Keys"><button type="button" data-kt="test" aria-pressed="${m === 'test'}">Test keys</button><button type="button" data-kt="live" aria-pressed="${m === 'live'}">Live keys</button></div>
+      ${g.fields.map(([f, label, ph, secret]) => `<label class="f">${label} ${secret ? `<span class="set ${cur[m]?.[f + 'Set'] ? 'y' : 'n'}">${cur[m]?.[f + 'Set'] ? 'saved' : 'not set'}</span>` : ''}<input type="${secret ? 'password' : 'text'}" autocomplete="off" data-f="${f}" placeholder="${secret && cur[m]?.[f + 'Set'] ? 'Leave empty to keep' : ph.replace('…', m + '_…')}" value="${esc(gwDraft[id]?.[m]?.[f] ?? (secret ? '' : cur[m]?.[f] || ''))}"></label>`).join('')}
+      <label class="f">Webhook URL<span class="copy" title="Click to copy" data-copy="${esc(hooks[id])}">${esc(hooks[id])}</span></label>` : ''}</div>`;
+    }).join('');
+  }
+  $('#gws').addEventListener('click', (e) => {
+    const t = e.target.closest('[data-on]'); if (t) { const id = t.dataset.on; (gwDraft[id] ||= {}).enabled = t.getAttribute('aria-checked') !== 'true'; t.setAttribute('aria-checked', String(gwDraft[id].enabled)); return; }
+    const k = e.target.closest('[data-kt]'); if (k) { keyTab[k.closest('[data-gw]').dataset.gw] = k.dataset.kt; renderGateways(); return; }
+    const c = e.target.closest('[data-copy]'); if (c) { navigator.clipboard?.writeText(c.dataset.copy).then(() => toast('Copied')); }
+  });
+  $('#gws').addEventListener('input', (e) => { const f = e.target.dataset.f; if (!f) return; const id = e.target.closest('[data-gw]').dataset.gw; ((gwDraft[id] ||= {})[keyTab[id]] ||= {})[f] = e.target.value; });
+  $('#gwSave').addEventListener('click', async () => {
+    const st = $('#gwStatus'); st.className = 'status'; st.textContent = 'Saving…';
+    const gateways = {}; for (const [id, d] of Object.entries(gwDraft)) gateways[id] = d;
+    try { const d = await api('/panel/api/billing/settings', { method: 'PUT', body: JSON.stringify({ appStoreMode: $('#appStore').checked, allowInstantTest: $('#instant').checked, gateways }) }); settings = d.settings; for (const k of Object.keys(gwDraft)) delete gwDraft[k]; renderGateways(); st.className = 'status ok'; st.textContent = 'Saved.'; toast('Payment settings saved'); }
+    catch (x) { st.className = 'status err'; st.textContent = x.message; }
+  });
+  const pays = { page: 1, f: '' };
+  const PF = [['', 'All'], ['live', 'Live'], ['test', 'Test'], ['pending', 'Waiting'], ['failed', 'Failed']];
+  async function loadPaymentList() {
+    $('#payChips').innerHTML = PF.map(([v, l]) => `<button type="button" data-pf="${v}" aria-pressed="${v === pays.f}">${l}</button>`).join('');
+    loading($('#payList'));
+    const q = pays.f === 'live' || pays.f === 'test' ? `&mode=${pays.f}` : pays.f ? `&status=${pays.f}` : '';
+    const d = await api(`/panel/api/payments?page=${pays.page}&pageSize=12${q}`);
+    $('#payList').innerHTML = d.items.length ? `<div class="tbl"><table><thead><tr><th>Date</th><th>Store</th><th>Method</th><th class="num">Paid</th><th class="num">Credits</th><th class="num">Est. profit</th><th>Status</th></tr></thead><tbody>${d.items.map((p) => `<tr><td class="muted">${when(p.createdAt)}</td><td>${esc(p.shop)}</td><td>${esc(p.method)} ${p.mode === 'test' ? '<span class="tag warn">Test</span>' : ''}</td><td class="num"><b>${money(p.amount, p.currency)}</b></td><td class="num">${n(p.credits)}</td><td class="num">${money(p.estProfit, p.currency)}</td><td>${payTag(p)}</td></tr>`).join('')}</tbody></table></div>${pager(d, (pg) => { pays.page = pg; loadPaymentList(); })}` : '<div class="empty">No payments here yet.</div>';
+  }
+  $('#payChips').addEventListener('click', (e) => { const b = e.target.closest('[data-pf]'); if (!b) return; pays.f = b.dataset.pf; pays.page = 1; loadPaymentList(); });
+  let revPage = 1;
+  async function loadRevenue() {
+    loading($('#revList'));
+    const r = await api(`/panel/api/billing/report?page=${revPage}&pageSize=10`);
+    $('#testNote').textContent = r.test.payments ? `${n(r.test.payments)} test payments (${money(r.test.amount, r.currency)}) not counted` : '';
+    const cc = (x) => money(x, r.costCurrency);
+    $('#revList').innerHTML = r.items.length ? `<div class="tbl"><table><thead><tr><th>Store</th><th class="num">Paid</th><th class="num">Revenue (${esc(r.costCurrency)})</th><th class="num">Credits sold</th><th class="num">Images made</th><th class="num">Image cost</th><th class="num">Gross profit</th><th class="num">Margin*</th></tr></thead><tbody>${r.items.map((s) => `<tr><td>${esc(s.shop)}</td><td class="num"><b>${money(s.revenue, r.currency)}</b></td><td class="num">${cc(s.revenueCc)}</td><td class="num">${n(s.creditsSold)}</td><td class="num">${n(s.images)}</td><td class="num">${cc(s.imageCost)}</td><td class="num" style="color:${s.profit < 0 ? 'var(--bad)' : 'inherit'}">${cc(s.profit)}</td><td class="num">${s.margin === null ? '–' : n(s.margin, 1) + '%'}</td></tr>`).join('')}<tr><td><b>All stores</b></td><td class="num"><b>${money(r.totals.revenue, r.currency)}</b></td><td class="num"><b>${cc(r.totals.revenueCc)}</b></td><td class="num"><b>${n(r.totals.creditsSold)}</b></td><td class="num"><b>${n(r.totals.images)}</b></td><td class="num"><b>${cc(r.totals.imageCost)}</b></td><td class="num"><b>${cc(r.totals.profit)}</b></td><td class="num"><b>${r.totals.margin === null ? '–' : n(r.totals.margin, 1) + '%'}</b></td></tr></tbody></table></div><p class="muted small" style="margin-top:8px">* Margin if every credit sold is used.</p>${pager(r, (p) => { revPage = p; loadRevenue(); })}` : '<div class="empty">No stores yet.</div>';
+  }
+  function loadPayments() { renderGateways(); loadPaymentList().catch((e) => { $('#payList').innerHTML = `<div class="empty">${esc(e.message)}</div>`; }); loadRevenue().catch(() => {}); }
+
+  // ---------- accounts ----------
+  async function loadAccounts() {
+    loading($('#accList'));
+    accounts = (await api('/panel/api/admins')).admins;
+    $('#accList').innerHTML = accounts.length ? `<table><thead><tr><th>Account</th><th class="num">Stores</th><th>Status</th><th></th></tr></thead><tbody>${accounts.map((a) => `<tr><td><b>${esc(a.name || a.email)}</b><div class="muted small">${esc(a.email)}</div></td><td class="num">${n(a.shops)}</td><td>${a.active ? '<span class="tag ok">Active</span>' : '<span class="tag">Suspended</span>'}</td><td class="num"><div class="row" style="justify-content:flex-end"><button class="btn ghost sm" data-acc="${esc(a.id)}" data-act="toggle" data-active="${a.active}">${a.active ? 'Suspend' : 'Restore'}</button><button class="btn danger sm" data-acc="${esc(a.id)}" data-act="delete">Delete</button></div></td></tr>`).join('')}</tbody></table>` : '<div class="empty">No accounts yet.</div>';
+  }
+  $('#accList').addEventListener('click', async (e) => {
+    const b = e.target.closest('[data-acc]'); if (!b) return;
+    try {
+      if (b.dataset.act === 'toggle') await api('/panel/api/admins/' + encodeURIComponent(b.dataset.acc), { method: 'PATCH', body: JSON.stringify({ active: b.dataset.active !== 'true' }) });
+      else { if (!confirm('Delete this account? Its stores stay, without an account.')) return; await api('/panel/api/admins/' + encodeURIComponent(b.dataset.acc), { method: 'DELETE', body: '{}' }); }
+      loadAccounts();
+    } catch (x) { alert(x.message); }
+  });
+  $('#accForm').addEventListener('submit', async (e) => {
+    e.preventDefault(); const st = $('#accStatus'); st.className = 'status'; st.textContent = 'Creating…';
+    try { const j = await api('/panel/api/admins', { method: 'POST', body: JSON.stringify({ name: $('#aName').value, email: $('#aEmail').value, password: $('#aPass').value }) }); st.className = 'status ok'; st.textContent = `Created ${j.email}. Share the password securely.`; e.target.reset(); loadAccounts(); }
+    catch (x) { st.className = 'status err'; st.textContent = x.message; }
+  });
+
+  // ---------- activity ----------
+  let actPage = 1;
+  const ACTIONS = { credits_purchased: 'Credits bought', credits_checkout_started: 'Checkout started', credits_adjusted: 'Credits adjusted', billing_settings_changed: 'Billing settings changed', store_pricing_changed: 'Store pricing changed', purchaser_texts_saved: 'Wording saved', purchaser_product_update: 'Product changed', purchaser_type_map: 'Product type mapped', purchaser_catalog_sync: 'Products refreshed', shopify_installed: 'Installed', app_uninstalled: 'Uninstalled' };
+  async function loadActivity() {
+    loading($('#actList'));
+    const d = await api(`/panel/api/audit?page=${actPage}&pageSize=20`);
+    $('#actList').innerHTML = d.items.length ? `<div class="tbl"><table><thead><tr><th>When</th><th>What</th><th>Store</th><th>Details</th></tr></thead><tbody>${d.items.map((x) => { const { at, action, shop, actor, _id, id, ...rest } = x; return `<tr><td class="muted">${when(at)}</td><td><b>${esc(ACTIONS[action] || action.replace(/_/g, ' '))}</b></td><td>${esc(shop || '–')}</td><td class="muted small">${esc(Object.entries(rest).filter(([, v]) => v !== null && v !== undefined && v !== '').map(([k, v]) => `${k}: ${typeof v === 'object' ? JSON.stringify(v) : v}`).join(', '))}</td></tr>`; }).join('')}</tbody></table></div>${pager(d, (p) => { actPage = p; loadActivity(); })}` : '<div class="empty">Nothing yet.</div>';
+  }
+
+  boot();
+})();
+</script>
+</body>
+</html>

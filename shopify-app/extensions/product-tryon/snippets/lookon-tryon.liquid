@@ -1,0 +1,107 @@
+{%- comment -%}
+  lookOn try-on markup, shared by both blocks:
+    blocks/tryon-block.liquid   - app block: the merchant drags it anywhere on the product page (placement: 'manual')
+    blocks/product-tryon.liquid - app embed: placed by the script next to Add to cart (placement: 'auto')
+  Wording, in order of priority:
+    1. lines the merchant changed in Shopify admin > Apps > lookOn > Texts (the script swaps them in),
+    2. the values set in the theme editor (marked data-theme-text, kept as they are),
+    3. lookOn's defaults (the button names the product's category; the photo hint fits the category).
+  Optional: product metafield custom.tryon_category (single line text) forces a category, e.g. hat, hair, beard, glasses.
+{%- endcomment -%}
+{%- assign api = block.settings.api_url | default: 'https://radrasa-dynamic-staging.vercel.app' -%}
+<div class="ptn" id="ptn-{{ block.id }}" {{ block.shopify_attributes }}
+  data-placement="{{ placement }}"
+  data-position="{{ block.settings.position | default: 'before_cart' }}"
+  data-api="{{ api | escape }}"
+  data-shop="{{ shop.permanent_domain | escape }}"
+  data-handle="{{ product.handle | escape }}"
+  data-variant="{{ product.selected_or_first_available_variant.id }}"
+  data-category="{{ product.metafields.custom.tryon_category.value | escape }}"
+  data-customer-id="{{ customer.id }}"
+  data-customer-email="{{ customer.email | escape }}"
+  data-login-url="{{ routes.account_login_url }}"
+  style="--ptn-accent: {{ block.settings.accent }}; --ptn-scan: {{ block.settings.scan_color | default: '#5ee1ff' }};">
+  <h3 class="ptn-title" data-t="heading"{% if block.settings.heading != blank %} data-theme-text{% endif %}>{{ block.settings.heading | default: 'Try it on' | escape }}</h3>
+  <p class="ptn-sub" data-t="subheading"{% if block.settings.subheading != blank %} data-theme-text{% endif %}>{{ block.settings.subheading | default: 'Add a front-facing photo to see this on you.' | escape }}</p>
+  {%- if block.settings.photo_hint != blank and block.settings.photo_hint != 'Use a clear, front-facing photo with your whole head and shoulders in view.' %}
+  <p class="ptn-hint" data-t="photoHint" data-theme-text>{{ block.settings.photo_hint | escape }}</p>
+  {%- else %}
+  <p class="ptn-hint" data-t="photoHint" hidden></p>
+  {%- endif %}
+
+  <label class="ptn-consent">
+    <input type="checkbox" class="ptn-consent-box">
+    <span data-t="consent"{% if block.settings.consent_text != blank %} data-theme-text{% endif %}>{{ block.settings.consent_text | default: "This is a photo of me and I'm 18 or over. I understand it is sent to an AI service to make the preview and is not saved." | escape }}</span>
+  </label>
+
+  <div class="ptn-gate" hidden>
+    <p class="ptn-gate-title" data-t="gateTitle">Keep trying on</p>
+    <p class="ptn-gate-intro"></p>
+    <form class="ptn-gate-form" novalidate>
+      <input type="email" class="ptn-gate-email" autocomplete="email" inputmode="email" required data-t="gateEmailPlaceholder" data-t-attr="placeholder" placeholder="you@example.com" aria-label="Email">
+      <button type="submit" class="ptn-btn" data-t="gateEmailButton">Continue</button>
+      <label class="ptn-gate-mkt" hidden><input type="checkbox" class="ptn-gate-mkt-box"> <span data-t="gateMarketing">Email me offers and news from this store</span></label>
+      <p class="ptn-gate-err" role="alert"></p>
+    </form>
+    <p class="ptn-gate-or" data-t="gateOr">or</p>
+    <a class="ptn-btn ptn-btn-alt ptn-gate-login" href="/account/login" data-t="gateLoginButton">Sign in</a>
+  </div>
+  <p class="ptn-left" hidden></p>
+
+  <div class="ptn-actions">
+    <label class="ptn-btn"><span class="ptn-btn-label" data-t="chooseButton"{% if block.settings.button_label != blank and block.settings.button_label != 'Choose photo' %} data-theme-text{% endif %}>{{ block.settings.button_label | default: 'Choose photo' | escape }}</span>
+      <input type="file" accept="image/*" class="ptn-file" hidden>
+    </label>
+    <button type="button" class="ptn-btn ptn-btn-alt ptn-selfie" data-t="selfieButton"{% if block.settings.selfie_label != blank %} data-theme-text{% endif %}>{{ block.settings.selfie_label | default: 'Take selfie' | escape }}</button>
+    <input type="file" accept="image/*" capture="user" class="ptn-file ptn-selfie-file" hidden>
+  </div>
+
+  <div class="ptn-camera" hidden>
+    <video class="ptn-video" autoplay playsinline muted></video>
+    <div class="ptn-actions">
+      <button type="button" class="ptn-btn ptn-snap" data-t="captureButton">Capture</button>
+      <button type="button" class="ptn-btn ptn-btn-alt ptn-cam-close" data-t="cancelButton">Cancel</button>
+    </div>
+  </div>
+
+  <p class="ptn-status" role="status" aria-live="polite"></p>
+  <div class="ptn-alert" role="alert" hidden>
+    <span class="ptn-alert-icon" aria-hidden="true"></span>
+    <div class="ptn-alert-body">
+      <p class="ptn-alert-title"></p>
+      <p class="ptn-alert-msg"></p>
+      <div class="ptn-error-actions">
+        <button type="button" class="ptn-btn ptn-retry" data-t="retryButton">Try again</button>
+        <button type="button" class="ptn-btn ptn-btn-alt ptn-newphoto" data-t="newPhotoButton">Use another photo</button>
+        <button type="button" class="ptn-btn ptn-btn-alt ptn-anyway" hidden data-t="tryAnyway">Use this photo anyway</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="ptn-stage" hidden>
+    <div class="ptn-preview-frame">
+      <img class="ptn-result" alt="Preview of this product on you">
+      <div class="ptn-loader" role="status" aria-live="polite" aria-label="Creating your preview…" data-t="loaderLabel" data-t-attr="aria-label">
+        <span class="ptn-scan-grid" aria-hidden="true"></span>
+        <span class="ptn-scan-line" aria-hidden="true"></span>
+        <span class="ptn-corner ptn-c1" aria-hidden="true"></span><span class="ptn-corner ptn-c2" aria-hidden="true"></span>
+        <span class="ptn-corner ptn-c3" aria-hidden="true"></span><span class="ptn-corner ptn-c4" aria-hidden="true"></span>
+        <div class="ptn-scan-info">
+          <span class="ptn-scan-ring" aria-hidden="true"></span>
+          <span class="ptn-scan-text">
+            <span class="ptn-scan-step">Creating your preview…</span>
+            <span class="ptn-scan-sub" data-t="scanSub">Usually 15–30 seconds</span>
+            <span class="ptn-scan-bar" aria-hidden="true"><span></span></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="ptn-actions">
+      <label class="ptn-keep" hidden><input type="checkbox" class="ptn-keepface" checked> <span data-t="keepFace">Keep my real face exactly as in my photo</span></label>
+      <button type="button" class="ptn-btn ptn-btn-alt ptn-toggle" data-t="showOriginal">Show my original photo</button>
+      <button type="button" class="ptn-btn ptn-regen" hidden data-t="previewOption">Preview this option</button>
+      <button type="button" class="ptn-btn ptn-btn-alt ptn-download" data-t="download">Download</button>
+    </div>
+  </div>
+  <p class="ptn-privacy" data-t="privacy"{% if block.settings.privacy_text != blank %} data-theme-text{% endif %}>{{ block.settings.privacy_text | default: 'Previews are AI-made and approximate: colour, size and fit will differ a little from the real product.' | escape }}</p>
+</div>

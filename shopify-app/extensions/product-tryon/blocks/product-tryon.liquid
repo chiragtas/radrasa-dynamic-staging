@@ -1,0 +1,107 @@
+{%- comment -%} lookOn try-on app embed: placed automatically next to Add to cart. Use the app block (tryon-block) to place it by hand. {%- endcomment -%}
+{%- if template.name == 'product' -%}
+{%- render 'lookon-tryon', block: block, product: product, placement: 'auto' -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "lookOn try-on (automatic)",
+  "target": "body",
+  "stylesheet": "product-tryon.css",
+  "javascript": "product-tryon.js",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "For themes where you can't add app blocks. lookOn places itself on product pages at the position below. If you added the lookOn try-on block to the product page, this embed hides itself, so you can leave it off."
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Position on the product page",
+      "default": "before_cart",
+      "options": [
+        {
+          "value": "before_cart",
+          "label": "Above Add to cart"
+        },
+        {
+          "value": "after_cart",
+          "label": "Below Add to cart"
+        },
+        {
+          "value": "after_buttons",
+          "label": "Below Buy it now"
+        },
+        {
+          "value": "info_end",
+          "label": "End of product information"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Try it on"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Add a front-facing photo to see this on you."
+    },
+    {
+      "type": "textarea",
+      "id": "photo_hint",
+      "label": "Photo guidance",
+      "default": "Use a clear, front-facing photo with your whole head and shoulders in view.",
+      "info": "Leave as is to show guidance that fits each product (e.g. wrist for watches)."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button text",
+      "default": "Choose photo",
+      "info": "Leave as is to name the product type, e.g. \"Choose photo to try on earrings\"."
+    },
+    {
+      "type": "text",
+      "id": "selfie_label",
+      "label": "Selfie button text",
+      "default": "Take selfie"
+    },
+    {
+      "type": "textarea",
+      "id": "consent_text",
+      "label": "Consent text",
+      "default": "This is a photo of me and I'm 18 or over. I understand it is sent to an AI service to make the preview and is not saved."
+    },
+    {
+      "type": "textarea",
+      "id": "privacy_text",
+      "label": "Privacy notice",
+      "default": "Previews are AI-made and approximate: colour, size and fit will differ a little from the real product."
+    },
+    {
+      "type": "color",
+      "id": "accent",
+      "label": "Accent color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "scan_color",
+      "label": "Scanner color",
+      "default": "#5ee1ff",
+      "info": "The light that sweeps over the shopper's photo while the preview is made."
+    },
+    {
+      "type": "text",
+      "id": "api_url",
+      "label": "Try-on server URL",
+      "default": "https://radrasa-dynamic-staging.vercel.app",
+      "info": "Only change this if you host your own Try-On server."
+    }
+  ]
+}
+{% endschema %}
