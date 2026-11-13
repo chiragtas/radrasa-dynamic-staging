@@ -21,7 +21,7 @@
   data-customer-email="{{ customer.email | escape }}"
   data-login-url="{{ routes.account_login_url }}"
   style="--ptn-accent: {{ block.settings.accent }}; --ptn-scan: {{ block.settings.scan_color | default: '#5ee1ff' }};">
-  <h3 class="ptn-title" data-t="heading"{% if block.settings.heading != blank %} data-theme-text{% endif %}>{{ block.settings.heading | default: 'Try it on' | escape }}</h3>
+  <h3 class="ptn-title" data-t="heading"{% if block.settings.heading != blank and block.settings.heading != 'Try it on' and block.settings.heading != 'lookOn' %} data-theme-text{% endif %}>{{ block.settings.heading | default: 'lookOn' | escape }}</h3>
   <p class="ptn-sub" data-t="subheading"{% if block.settings.subheading != blank %} data-theme-text{% endif %}>{{ block.settings.subheading | default: 'Add a front-facing photo to see this on you.' | escape }}</p>
   {%- if block.settings.photo_hint != blank and block.settings.photo_hint != 'Use a clear, front-facing photo with your whole head and shoulders in view.' %}
   <p class="ptn-hint" data-t="photoHint" data-theme-text>{{ block.settings.photo_hint | escape }}</p>
